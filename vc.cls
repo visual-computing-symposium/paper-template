@@ -7,7 +7,7 @@
 %%
 \ProvidesClass{vc}[2021/02/24]
 
-\LoadClass[]{jarticle}
+\LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard]{bxjsarticle}
 
 \pagestyle{empty}
 \setlength{\topmargin}{-2cm}
@@ -16,3 +16,16 @@
 \setlength{\oddsidemargin}{-10mm}
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
+
+\renewcommand{\maketitle}{%
+  \twocolumn[\vc@maketitle]
+}
+\newcommand{\vc@maketitle}{%
+  \begin{center}
+    \ifx\@title\@undefined\else{\LARGE\@title\par}\fi
+    \vskip 3mm
+    \ifx\@author\@undefined\else
+      \@author
+    \fi
+  \end{center}
+}
