@@ -15,6 +15,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{amsmath}
+\RequirePackage{caption}
 
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
@@ -27,6 +28,8 @@
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
 
+\newcommand{\teaser}[1]{\gdef\@teaser{#1}}
+
 \renewcommand{\maketitle}{%
   \twocolumn[\vc@maketitle]
 }
@@ -36,6 +39,11 @@
     \vskip 3mm
     \ifx\@author\@undefined\else
       \@author
+    \fi
+    \ifx\@teaser\@undefined\else
+      \vskip 2mm
+      \@teaser
+      \vskip 5mm
     \fi
   \end{center}
 }
