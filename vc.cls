@@ -9,6 +9,13 @@
 
 \LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard]{bxjsarticle}
 
+\RequirePackage[hyphens]{url}
+\RequirePackage[colorlinks]{hyperref}
+\RequirePackage{booktabs}
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage{amsmath}
+
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
 
