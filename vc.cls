@@ -9,6 +9,9 @@
 
 \LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard]{bxjsarticle}
 
+% Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
+\RequirePackage{bxpapersize}
+
 \pagestyle{empty}
 \setlength{\topmargin}{-2cm}
 \setlength{\textwidth}{18cm}
