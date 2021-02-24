@@ -8,3 +8,11 @@
 \ProvidesClass{vc}[2021/02/24]
 
 \LoadClass[]{jarticle}
+
+\pagestyle{empty}
+\setlength{\topmargin}{-2cm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{25.5cm}
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\evensidemargin}{-10mm}
+\setlength{\columnsep}{6mm}
