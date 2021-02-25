@@ -15,6 +15,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{caption}
 
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471

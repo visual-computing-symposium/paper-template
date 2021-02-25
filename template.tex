@@ -2,11 +2,6 @@
 
 \title{Visual Computing論文テンプレート}
 
-\begin{abstract}
-  コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
-  創造的，独創的な学術的成果をはじめ，CG技術の新しい使い方や実用例などの応用的成果まで，未来のCG業界を刺激する幅広い投稿をお待ちしております．
-\end{abstract}
-
 \usepackage{tabularx}
 \author{%
   {\large%
@@ -23,6 +18,11 @@
     E-mail: $\dagger${}hanako@gazo.ac.jp, $\ddagger${}\{taro, saburo\}@denshi.co.jp
   \end{tabular}
 }
+
+\begin{abstract}
+  コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
+  創造的，独創的な学術的成果をはじめ，CG技術の新しい使い方や実用例などの応用的成果まで，未来のCG業界を刺激する幅広い投稿をお待ちしております．
+\end{abstract}
 
 \begin{teaserfigure}
   \centering
@@ -61,7 +61,7 @@
 
 \section{テンプレートの使用例}
 
-インライン数式は $\mathbf{x} \in \mathcal{X}$ のように記述する.
+インライン数式は $\mathbf{x} \in \mathbb{R}^{n}$ のように記述する.
 ディスプレイ数式は
 \begin{align}
   \mathbf{A} \mathbf{x} = \mathbf{b}
@@ -71,7 +71,6 @@
   \mathbf{x}^{*} = \mathop{\text{arg max}}_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})
 \end{align}
 などのように記述する.
-
 画像は\autoref{fig:teaser}などのように参照する.
 参考文献は \cite{GSC12,WL00} などのように参照する.
 
