@@ -1,6 +1,6 @@
 \documentclass{vc}
 
-\title{Visual Computing発表募集}
+\title{Visual Computing論文テンプレート}
 
 \begin{abstract}
   コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
@@ -27,7 +27,7 @@
 \begin{teaserfigure}
   \centering
   \includegraphics[width=\textwidth]{./figures/leica.pdf}
-  \captionof{figure}{ティザー画像のキャプション.}
+  \captionof{figure}{ティザー画像のキャプションをここに記述する.}
   \label{fig:teaser}
 \end{teaserfigure}
 
@@ -35,7 +35,10 @@
 
 \maketitle
 
-\section{はじめに}
+\section{VC 2020論文募集}
+
+\subsection{はじめに}
+
 コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
 創造的，独創的な学術的成果をはじめ，CG技術の新しい使い方や実用例などの応用的成果まで，未来のCG業界を刺激する幅広い投稿をお待ちしております．
 
@@ -45,18 +48,34 @@
 
 論文は締切前であれば何度でもアップロードできます．締切を過ぎた投稿は受け付けませんので，時間に余裕を持って投稿してください．
 
+\subsection{論文（査読有り，口頭発表）}
 
-\section{論文（査読有り，口頭発表）}
 学術的な研究成果について，研究の背景，理論，アルゴリズム，結果などを紹介する論文を募集します． また，CG技術の新しい使い方や，CG技術の産業応用に関する論文の投稿も歓迎します．投稿論文はプログラム委員会での議論を通じて，ロング発表，ショート発表，不採択のいずれかに判定されます．
 また，ロング・ショートを問わず，採択論文は査読付きシンポジウム論文（フルペーパー）として扱います．
 
 優秀なロング発表論文にはVC論文賞を，優秀なショート発表にはVCショート発表賞をそれぞれ授与します． 受賞論文にはそれぞれ賞状と副賞を贈呈するとともに，2020年夏頃に発行されるCGWORLD.jpに掲載予定の「Visual Computing 2020開催レポート」(仮題)の中で論文紹介されます．
 
-\section{ポスター（査読無し）}
+\subsection{ポスター（査読無し）}
+
 完成された研究のみならず，新しいアイデア，進行中の研究紹介など，さまざまな性格の発表を募集します．VCのポスターでは，「既存技術について，自分の頭で考え直したこと」もオリジナリティであるとして発表を歓迎します．優秀なポスターについてはVCポスター賞を授与します．
+
+\section{テンプレートの使用例}
+
+インライン数式は $\mathbf{x} \in \mathcal{X}$ のように記述する.
+ディスプレイ数式は
+\begin{align}
+  \mathbf{A} \mathbf{x} = \mathbf{b}
+\end{align}
+や
+\begin{align}
+  \mathbf{x}^{*} = \mathop{\text{arg max}}_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})
+\end{align}
+などのように記述する.
+
+画像は\autoref{fig:teaser}などのように参照する.
+参考文献は \cite{GSC12,WL00} などのように参照する.
 
 \small
 \bibliographystyle{IEEEtran}
-\nocite{*}
 \bibliography{template.bib}
 \end{document}
