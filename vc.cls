@@ -20,7 +20,11 @@
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
 
+% For the \Collect@Body command
+\RequirePackage{environ}
+
 \pagestyle{empty}
+
 \setlength{\topmargin}{-2cm}
 \setlength{\textwidth}{18cm}
 \setlength{\textheight}{25.5cm}
@@ -28,14 +32,22 @@
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
 
-\newcommand{\teaser}[1]{\gdef\@teaser{#1}}
+% 環境の定義
+
+\newenvironment{teaser}{\Collect@Body\@saveteaser}{}
+\long\def\@saveteaser#1{\long\gdef\@teaser{#1}}
+\@saveteaser{}
+
+% タイトル部分の定義
 
 \renewcommand{\maketitle}{%
   \twocolumn[\vc@maketitle]
 }
 \newcommand{\vc@maketitle}{%
   \begin{center}
-    \ifx\@title\@undefined\else{\LARGE\@title\par}\fi
+    \ifx\@title\@undefined\else
+      {\LARGE\@title\par}
+    \fi
     \vskip 3mm
     \ifx\@author\@undefined\else
       \@author
