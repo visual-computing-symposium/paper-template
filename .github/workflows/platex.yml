@@ -11,8 +11,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: install-dependencies
       run: |
-        sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-cjk
-        sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-fonts-extra
+        sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-japanese
+        sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
         sudo apt-get install -y --no-install-recommends latexmk
     - name: compile
       run: |
