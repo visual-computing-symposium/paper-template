@@ -1,0 +1,25 @@
+name: pLaTeX
+
+on: [push]
+
+jobs:
+  compile:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install-dependencies
+      run: |
+        sudo apt-get install -y --no-install-recommends texlive-base texlive-lang-japanese
+        sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-recommended texlive-latex-extra
+        sudo apt-get install -y --no-install-recommends texlive-font-utils texlive-generic-extra texlive-science
+        sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+        sudo apt-get install -y --no-install-recommends latexmk
+    - name: compile
+      run: |
+        latexmk template.tex
+    - uses: actions/upload-artifact@v1
+      with:
+        name: template.pdf
+        path: template.pdf

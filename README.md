@@ -1,12 +1,20 @@
 # paper-template
 
+[![pLaTeX](https://github.com/visual-computing-symposium/paper-template/actions/workflows/platex.yml/badge.svg)](https://github.com/visual-computing-symposium/paper-template/actions/workflows/platex.yml)
+
 Visual Computingシンポジウム向けの論文テンプレートです。
 
-## Overleafでの利用
+## サポート
+
+- pLaTeX (default)
+- upLaTeX
+- luaLaTeX
+
+## Overleafでの利用方法
 
 (TODO)
 
-## コンパイル
+## コンパイル方法
 
 ### Latexmkを用いたコンパイル（推奨）
 
