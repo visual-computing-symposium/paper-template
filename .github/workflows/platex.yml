@@ -1,0 +1,21 @@
+name: pLaTeX
+
+on: [push]
+
+jobs:
+  compile:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install-dependencies
+      run: |
+        sudo apt-get install -y --no-install-recommends texlive-base latexmk
+    - name: compile
+      run: |
+        latexmk template.tex
+    - uses: actions/upload-artifact@v1
+      with:
+        name: template.pdf
+        path: template.pdf
