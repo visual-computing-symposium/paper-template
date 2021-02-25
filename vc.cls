@@ -34,6 +34,10 @@
 
 % 環境の定義
 
+\renewenvironment{abstract}{\Collect@Body\@saveabstract}{}
+\long\def\@saveabstract#1{\long\gdef\@abstract{#1}}
+\@saveabstract{}
+
 \newenvironment{teaser}{\Collect@Body\@saveteaser}{}
 \long\def\@saveteaser#1{\long\gdef\@teaser{#1}}
 \@saveteaser{}
@@ -51,6 +55,11 @@
     \vskip 3mm
     \ifx\@author\@undefined\else
       \@author
+    \fi
+    \ifx\@abstract\@undefined\else
+      \vskip 3mm
+      \parbox{.8\textwidth}{\small \textbf{概要} \@abstract}
+      \vskip 2mm
     \fi
     \ifx\@teaser\@undefined\else
       \vskip 2mm
