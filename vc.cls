@@ -38,7 +38,7 @@
 \long\def\@saveabstract#1{\long\gdef\@abstract{#1}}
 \@saveabstract{}
 
-\newenvironment{teaser}{\Collect@Body\@saveteaser}{}
+\newenvironment{teaserfigure}{\Collect@Body\@saveteaser}{}
 \long\def\@saveteaser#1{\long\gdef\@teaser{#1}}
 \@saveteaser{}
 
