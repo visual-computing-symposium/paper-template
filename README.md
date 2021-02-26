@@ -8,7 +8,7 @@ Visual Computingシンポジウム向けの論文テンプレートです。
 
 - pLaTeX (default)
 - upLaTeX
-- luaLaTeX
+- LuaLaTeX
 
 ## Overleafでの利用方法
 
