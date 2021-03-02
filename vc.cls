@@ -13,7 +13,7 @@
 \RequirePackage[colorlinks]{hyperref}
 \RequirePackage{booktabs}
 \RequirePackage{graphicx}
-\RequirePackage{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{caption}
@@ -32,6 +32,11 @@
 \setlength{\oddsidemargin}{-10mm}
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
+
+% 色の定義
+
+\colorlet{LinkColor}{NavyBlue}
+\hypersetup{allcolors=LinkColor}
 
 % 環境の定義
 
