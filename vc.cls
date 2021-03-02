@@ -38,6 +38,15 @@
 \colorlet{LinkColor}{NavyBlue}
 \hypersetup{allcolors=LinkColor}
 
+% \autorefの表記の設定
+
+\renewcommand{\equationautorefname}{式}
+\renewcommand{\figureautorefname}{図}
+\renewcommand{\tableautorefname}{表}
+\renewcommand{\sectionautorefname}{\S}
+\renewcommand{\subsectionautorefname}{\S}
+\renewcommand{\subsubsectionautorefname}{\S}
+
 % 環境の定義
 
 \renewenvironment{abstract}{\Collect@Body\@saveabstract}{}
