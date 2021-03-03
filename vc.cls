@@ -47,6 +47,11 @@
 \renewcommand{\subsectionautorefname}{\S}
 \renewcommand{\subsubsectionautorefname}{\S}
 
+% 参考文献のスタイル設定
+
+\RequirePackage[square,sort,comma,numbers]{natbib}
+\renewcommand*{\bibfont}{\small}
+
 % 環境の定義
 
 \renewenvironment{abstract}{\Collect@Body\@saveabstract}{}
