@@ -107,6 +107,28 @@ URLは\url{https://www.siggraph.org/}のように記載する.
   \end{tabular}
 \end{table}
 
+\section{テンプレートについて}
+
+本テンプレートの実装の詳細について記す.
+本テンプレートは\textsf{bxjsarticle}クラスファイルを基礎としており, pLaTeX, upLaTeX, LuaLaTeXでの利用をサポートしている.
+クラスファイルでは以下のパッケージをロードしている.
+\begin{itemize}
+  \item \textsf{url}
+  \item \textsf{hyperref}
+  \item \textsf{booktabs}
+  \item \textsf{graphicx}
+  \item \textsf{xcolor}
+  \item \textsf{amsmath}
+  \item \textsf{amssymb}
+  \item \textsf{caption}
+  \item \textsf{bxpapersize}
+  \item \textsf{environ}
+  \item \textsf{natbib}
+\end{itemize}
+
+なお, 本テンプレートはGitHub\footnote{\url{https://github.com/visual-computing-symposium/paper-template}}上で管理されている.
+バグ報告や改善提案などはGitHubを通して誰でも行うことができる.
+
 \bibliographystyle{IEEEtran}
 \bibliography{template.bib}
 
