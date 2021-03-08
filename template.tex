@@ -4,9 +4,13 @@
 
 \begin{authors}
   % 固定幅かつセンタリングのカラム "C" の定義（幅は著者数や文字数に応じて各自調整する）
-  \newcolumntype{C}{>{\centering}p{0.15\textwidth}}
+  %
+  % 1--4人 ... 0.20\textwidth
+  % 5人    ... 0.15\textwidth（一行で著者を表示する場合）
+  % 5人以上 ... 0.20\textwidth（二行以上で著者を表示する場合）
+  \newcolumntype{C}{>{\centering}p{0.20\textwidth}}
 
-  % 上記のカラム定義 "C" を用いた表の定義（レイアウトは必要に応じて各自調整する）
+  % 上記のカラム定義 "C" を用いた表の定義（二行以上必要な場合等のレイアウトは各自調整する）
   \begin{tabular}{CCC}
     画像 花子$^\dagger$ & 電子 太郎$^\ddagger$ & 学会 三郎$^\ddagger$
   \end{tabular}
@@ -126,6 +130,7 @@ URLは\url{https://www.siggraph.org/}のように記載する.
   \item \textsf{xcolor}
   \item \textsf{amsmath}
   \item \textsf{amssymb}
+  \item \textsf{array}
   \item \textsf{bxpapersize}
   \item \textsf{environ}
   \item \textsf{natbib}
