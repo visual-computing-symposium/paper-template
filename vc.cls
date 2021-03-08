@@ -84,8 +84,7 @@
     \ifx\@teaser\@undefined\else
       \vskip 2mm
       \begingroup
-        % Why using double "#"s? See https://en.wikibooks.org/wiki/LaTeX/Macros
-        \newcommand{\teasercaption}[1]{\captionof{figure}{##1}}
+        \captionsetup{type=figure}
         \@teaser
       \endgroup
       \vskip 5mm
