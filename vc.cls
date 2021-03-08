@@ -77,6 +77,8 @@
 
 % タイトル部分の定義
 
+\newcommand{\plainauthors}[1]{\gdef\@plainauthors{#1}}
+
 \renewcommand{\maketitle}{%
   \twocolumn[\vc@maketitle]
 }
@@ -115,4 +117,13 @@
       \vskip 5mm
     \fi
   \end{center}
+}
+
+\let\oldmaketitle\maketitle
+\renewcommand{\maketitle}{
+  \hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@plainauthors},
+  }
+  \oldmaketitle
 }
