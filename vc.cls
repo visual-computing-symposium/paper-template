@@ -83,7 +83,11 @@
     \fi
     \ifx\@teaser\@undefined\else
       \vskip 2mm
-      \@teaser
+      \begingroup
+        % Why using double "#"s? See https://en.wikibooks.org/wiki/LaTeX/Macros
+        \newcommand{\teasercaption}[1]{\captionof{figure}{##1}}
+        \@teaser
+      \endgroup
       \vskip 5mm
     \fi
   \end{center}
