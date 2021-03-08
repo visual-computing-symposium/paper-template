@@ -11,12 +11,12 @@
 
 \RequirePackage[hyphens]{url}
 \RequirePackage[colorlinks]{hyperref}
+\RequirePackage[all]{hypcap}
 \RequirePackage{booktabs}
 \RequirePackage{graphicx}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
-\RequirePackage{caption}
 
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
@@ -84,7 +84,7 @@
     \ifx\@teaser\@undefined\else
       \vskip 2mm
       \begingroup
-        \captionsetup{type=figure}
+        \def\@captype{figure}
         \@teaser
       \endgroup
       \vskip 5mm
