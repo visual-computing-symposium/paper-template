@@ -17,6 +17,7 @@
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+\RequirePackage{array}
 
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
@@ -54,6 +55,18 @@
 
 % 環境の定義
 
+\newenvironment{authors}{\Collect@Body\@saveauthors}{}
+\long\def\@saveauthors#1{\long\gdef\@authors{#1}}
+\@saveauthors{}
+
+\newenvironment{affiliations}{\Collect@Body\@saveaffiliations}{}
+\long\def\@saveaffiliations#1{\long\gdef\@affiliations{#1}}
+\@saveaffiliations{}
+
+\newenvironment{emails}{\Collect@Body\@saveemails}{}
+\long\def\@saveemails#1{\long\gdef\@emails{#1}}
+\@saveemails{}
+
 \renewenvironment{abstract}{\Collect@Body\@saveabstract}{}
 \long\def\@saveabstract#1{\long\gdef\@abstract{#1}}
 \@saveabstract{}
@@ -73,8 +86,20 @@
       {\LARGE\@title\par}
     \fi
     \vskip 3mm
-    \ifx\@author\@undefined\else
-      \@author
+    \ifx\@authors\@undefined\else
+      \begingroup
+        \large
+        \centering
+        \@authors
+      \endgroup
+      \vskip 1mm
+    \fi
+    \ifx\@affiliations\@undefined\else
+      \@affiliations
+    \fi
+    \ifx\@emails\@undefined\else
+      \vskip 0mm
+      \@emails
     \fi
     \ifx\@abstract\@undefined\else
       \vskip 3mm

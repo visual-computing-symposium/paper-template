@@ -2,22 +2,27 @@
 
 \title{Visual Computing論文テンプレート}
 
-\usepackage{tabularx}
-\author{%
-  {\large%
-    \begin{tabularx}{.8\textwidth}{*3{>{\centering\arraybackslash}X}}
-      画像 花子$^\dagger$ & 電子 太郎$^\ddagger$ & 学会 三郎$^\ddagger$
-    \end{tabularx}
-  }
-  \\
+\begin{authors}
+  % 固定幅かつセンタリングのカラム "C" の定義（幅は著者数や文字数に応じて各自調整する）
+  \newcolumntype{C}{>{\centering}p{0.15\textwidth}}
+
+  % 上記のカラム定義 "C" を用いた表の定義（レイアウトは必要に応じて各自調整する）
+  \begin{tabular}{CCC}
+    画像 花子$^\dagger$ & 電子 太郎$^\ddagger$ & 学会 三郎$^\ddagger$
+  \end{tabular}
+\end{authors}
+
+\begin{affiliations}
   \begin{tabular}{cc}
     $\dagger$画像大学工学部 & $\ddagger$画像株式会社開発部
   \end{tabular}
-  \\
+\end{affiliations}
+
+\begin{emails}
   \begin{tabular}{c}
     E-mail: $\dagger${}hanako@gazo.ac.jp, $\ddagger${}\{taro, saburo\}@denshi.co.jp
   \end{tabular}
-}
+\end{emails}
 
 \begin{abstract}
   コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
