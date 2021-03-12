@@ -25,6 +25,9 @@
 % For the \Collect@Body command
 \RequirePackage{environ}
 
+% For the \StrLen command
+\RequirePackage{xstring}
+
 \pagestyle{empty}
 
 \setlength{\topmargin}{-2cm}
@@ -104,9 +107,12 @@
       \@emails
     \fi
     \ifx\@abstract\@undefined\else
-      \vskip 3mm
-      \parbox{.8\textwidth}{\small \textbf{概要} \@abstract}
-      \vskip 2mm
+      \StrLen{\@abstract}[\length@abstract]
+      \ifnum\length@abstract>0
+        \vskip 3mm
+        \parbox{.8\textwidth}{\small \textbf{概要} \@abstract}
+        \vskip 2mm
+      \fi
     \fi
     \ifx\@teaser\@undefined\else
       \vskip 2mm
