@@ -121,6 +121,17 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 
 本テンプレートの実装の詳細について記す.
 本テンプレートは\textsf{bxjsarticle}クラスファイルを基礎としており, pLaTeX, upLaTeX, LuaLaTeXでの利用をサポートしている.
+
+また, ローカル環境での使用に加え, オンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.
+Overleafで使用する場合, \autoref{fig:overleaf}のように``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している.}し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.5\columnwidth]{./figures/overleaf.pdf}
+  \caption{Overleafで本テンプレートを使用する際の手続き.}
+  \label{fig:overleaf}
+\end{figure}
+
 クラスファイルでは以下のパッケージをロードしている.
 \begin{itemize}
   \item \textsf{url}
