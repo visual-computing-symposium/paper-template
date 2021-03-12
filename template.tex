@@ -1,14 +1,15 @@
 \documentclass{vc}
 
+% タイトルの定義（最初のページの上部に出力されるほか、PDFのメタデータとしても利用される）
 \title{Visual Computing論文テンプレート}
+
+% 著者の定義（PDFのメタデータとして利用される）
 \plainauthors{画像 花子, 電子 太郎, 学会 三郎}
 
+% 著者の定義（最初のページの上部に出力される）
 \begin{authors}
   % 固定幅かつセンタリングのカラム "C" の定義（幅は著者数や文字数に応じて各自調整する）
-  %
-  % 1--4人 ... 0.20\textwidth
-  % 5人    ... 0.15\textwidth（一行で著者を表示する場合）
-  % 5人以上 ... 0.20\textwidth（二行以上で著者を表示する場合）
+  % Reference: https://en.wikibooks.org/wiki/LaTeX/Tables
   \newcolumntype{C}{>{\centering}p{0.20\textwidth}}
 
   % 上記のカラム定義 "C" を用いた表の定義（二行以上必要な場合等のレイアウトは各自調整する）
@@ -17,23 +18,28 @@
   \end{tabular}
 \end{authors}
 
+% 著者所属の定義（最初のページの上部に出力される）
 \begin{affiliations}
   \begin{tabular}{cc}
     $\dagger$画像大学工学部 & $\ddagger$画像株式会社開発部
   \end{tabular}
 \end{affiliations}
 
+% 著者メールアドレスの定義（最初のページの上部に出力される）
 \begin{emails}
   \begin{tabular}{c}
     E-mail: $\dagger${}hanako@gazo.ac.jp, $\ddagger${}\{taro, saburo\}@denshi.co.jp
   \end{tabular}
 \end{emails}
 
+% 概要の定義（最初のページの上部に出力される）
 \begin{abstract}
   コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
   創造的，独創的な学術的成果をはじめ，CG技術の新しい使い方や実用例などの応用的成果まで，未来のCG業界を刺激する幅広い投稿をお待ちしております．
 \end{abstract}
 
+% ティザー画像の定義（最初のページの上部に出力される）
+% Note: 不要な場合はteaserfigure環境ごと削除する
 \begin{teaserfigure}
   \centering
   \includegraphics[width=\textwidth]{./figures/leica.pdf}
@@ -44,6 +50,10 @@
 \begin{document}
 
 \maketitle
+
+% ------------------------------------------------------------------------------
+% 以下に論文本文を記述する
+% ------------------------------------------------------------------------------
 
 \section{VC 2020論文募集}
 
@@ -132,10 +142,10 @@ URLは\url{https://www.siggraph.org/}のように記載する.
   \item \textsf{amsmath}
   \item \textsf{amssymb}
   \item \textsf{array}
+  \item \textsf{natbib}
   \item \textsf{bxpapersize}
   \item \textsf{environ}
   \item \textsf{xstring}
-  \item \textsf{natbib}
 \end{itemize}
 
 本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.

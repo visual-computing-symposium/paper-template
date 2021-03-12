@@ -18,6 +18,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{array}
+\RequirePackage[square,sort,comma,numbers]{natbib}
 
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
@@ -28,6 +29,10 @@
 % For the \StrLen command
 \RequirePackage{xstring}
 
+% ------------------------------------------------------------------------------
+% ページ全体の定義
+% ------------------------------------------------------------------------------
+
 \pagestyle{empty}
 
 \setlength{\topmargin}{-2cm}
@@ -37,12 +42,16 @@
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
 
+% ------------------------------------------------------------------------------
 % 色の定義
+% ------------------------------------------------------------------------------
 
 \colorlet{LinkColor}{NavyBlue}
 \hypersetup{allcolors=LinkColor}
 
+% ------------------------------------------------------------------------------
 % \autorefの表記の設定
+% ------------------------------------------------------------------------------
 
 \renewcommand{\equationautorefname}{式}
 \renewcommand{\figureautorefname}{図}
@@ -51,12 +60,15 @@
 \renewcommand{\subsectionautorefname}{\S}
 \renewcommand{\subsubsectionautorefname}{\S}
 
+% ------------------------------------------------------------------------------
 % 参考文献のスタイル設定
+% ------------------------------------------------------------------------------
 
-\RequirePackage[square,sort,comma,numbers]{natbib}
 \renewcommand*{\bibfont}{\small}
 
+% ------------------------------------------------------------------------------
 % 環境の定義
+% ------------------------------------------------------------------------------
 
 \newenvironment{authors}{\Collect@Body\@saveauthors}{}
 \long\def\@saveauthors#1{\long\gdef\@authors{#1}}
@@ -78,9 +90,9 @@
 \long\def\@saveteaser#1{\long\gdef\@teaser{#1}}
 \@saveteaser{}
 
+% ------------------------------------------------------------------------------
 % タイトル部分の定義
-
-\newcommand{\plainauthors}[1]{\gdef\@plainauthors{#1}}
+% ------------------------------------------------------------------------------
 
 \renewcommand{\maketitle}{%
   \twocolumn[\vc@maketitle]
@@ -124,6 +136,12 @@
     \fi
   \end{center}
 }
+
+% ------------------------------------------------------------------------------
+% PDFメタデータの設定
+% ------------------------------------------------------------------------------
+
+\newcommand{\plainauthors}[1]{\gdef\@plainauthors{#1}}
 
 \let\oldmaketitle\maketitle
 \renewcommand{\maketitle}{
