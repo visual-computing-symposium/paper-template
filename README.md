@@ -20,9 +20,9 @@ Overleafで使用する場合、 `New Project` メニュー下にある `Upload 
 
 本テンプレートには `latexmkrc` というLatexmk用の設定ファイルが含まれており、そのディレクトリにおいて下記のコマンドを打つだけでPDFファイルの生成まで行うことができます。
 ```bash
-latexmk
+latexmk template.tex
 ```
 
 ### その他の方法によるコンパイル
 
-(TODO)
+pLaTeX, pBibTeX, dvipdfmxなどを直接コマンドラインから呼び出すことでPDFファイルの生成をすることができます。
