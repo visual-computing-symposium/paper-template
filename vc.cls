@@ -26,9 +26,6 @@
 % For the \Collect@Body command
 \RequirePackage{environ}
 
-% For the \StrLen command
-\RequirePackage{xstring}
-
 % ------------------------------------------------------------------------------
 % ページ全体の定義
 % ------------------------------------------------------------------------------
@@ -82,7 +79,7 @@
 \long\def\@saveemails#1{\long\gdef\@emails{#1}}
 \@saveemails{}
 
-\renewenvironment{abstract}{\Collect@Body\@saveabstract}{}
+\renewenvironment{abstract}{\Collect@Body\@saveabstract}{\gdef\@abstract@defined{}}
 \long\def\@saveabstract#1{\long\gdef\@abstract{#1}}
 \@saveabstract{}
 
@@ -118,13 +115,10 @@
       \vskip 0mm
       \@emails
     \fi
-    \ifx\@abstract\@undefined\else
-      \StrLen{\@abstract}[\length@abstract]
-      \ifnum\length@abstract>0
-        \vskip 3mm
-        \parbox{.8\textwidth}{\small \textbf{概要} \@abstract}
-        \vskip 2mm
-      \fi
+    \ifx\@abstract@defined\@undefined\else
+      \vskip 3mm
+      \parbox{.8\textwidth}{\small \textbf{概要} \@abstract}
+      \vskip 2mm
     \fi
     \ifx\@teaser\@undefined\else
       \vskip 2mm
