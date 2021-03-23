@@ -93,6 +93,10 @@
 
 \renewcommand{\maketitle}{%
   \twocolumn[\vc@maketitle]
+  \ifx\@abstract@defined\@undefined\else
+    \section*{概要}
+    \noindent\@abstract
+  \fi
 }
 \newcommand{\vc@maketitle}{%
   \begin{center}
@@ -114,11 +118,6 @@
     \ifx\@emails\@undefined\else
       \vskip 0mm
       \@emails
-    \fi
-    \ifx\@abstract@defined\@undefined\else
-      \vskip 3mm
-      \parbox{.8\textwidth}{\small \textbf{概要} \@abstract}
-      \vskip 2mm
     \fi
     \ifx\@teaser\@undefined\else
       \vskip 2mm
