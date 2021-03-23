@@ -8,6 +8,7 @@
 \ProvidesClass{vc}[2021/02/24]
 
 \DeclareOption{anonymous}{\def\vc@anonymous{}}
+\DeclareOption{english}{\def\vc@english{}}
 \ProcessOptions\relax
 
 \LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard,base=10pt]{bxjsarticle}
@@ -34,7 +35,9 @@
 \RequirePackage{titlesec}
 
 % For enforce first paragraphs to be indented (to follow Japanese tradition)
-\RequirePackage{indentfirst}
+\ifx\vc@english\@undefined
+  \RequirePackage{indentfirst}
+\fi
 
 % ------------------------------------------------------------------------------
 % ページ全体の定義
@@ -65,29 +68,43 @@
 % \autorefの表記の設定
 % ------------------------------------------------------------------------------
 
-\renewcommand{\equationautorefname}{式}
-\renewcommand{\figureautorefname}{図}
-\renewcommand{\tableautorefname}{表}
-\renewcommand{\sectionautorefname}{\S}
-\renewcommand{\subsectionautorefname}{\S}
-\renewcommand{\subsubsectionautorefname}{\S}
+\ifx\vc@english\@undefined
+  \renewcommand{\equationautorefname}{式}
+  \renewcommand{\figureautorefname}{図}
+  \renewcommand{\tableautorefname}{表}
+  \renewcommand{\sectionautorefname}{\S}
+  \renewcommand{\subsectionautorefname}{\S}
+  \renewcommand{\subsubsectionautorefname}{\S}
+\fi
 
 % ------------------------------------------------------------------------------
 % \crefの表記の設定
 % ------------------------------------------------------------------------------
 
-\crefname{section}{}{}
-\crefname{subsection}{}{}
-\crefname{subsubsection}{}{}
-\crefname{figure}{}{}
-\crefname{table}{}{}
-\crefname{equation}{}{}
-\creflabelformat{section}{#2第#1節#3}
-\creflabelformat{subsection}{#2第#1小節#3}
-\creflabelformat{subsubsection}{#2第#1項#3}
-\creflabelformat{figure}{#2図#1#3}
-\creflabelformat{table}{#2表#1#3}
-\creflabelformat{equation}{#2式(#1)#3}
+\ifx\vc@english\@undefined
+  \crefname{section}{}{}
+  \crefname{subsection}{}{}
+  \crefname{subsubsection}{}{}
+  \crefname{figure}{}{}
+  \crefname{table}{}{}
+  \crefname{equation}{}{}
+  \creflabelformat{section}{#2第#1節#3}
+  \creflabelformat{subsection}{#2第#1小節#3}
+  \creflabelformat{subsubsection}{#2第#1項#3}
+  \creflabelformat{figure}{#2図#1#3}
+  \creflabelformat{table}{#2表#1#3}
+  \creflabelformat{equation}{#2式(#1)#3}
+\fi
+
+% ------------------------------------------------------------------------------
+% 英語環境における追加定義
+% ------------------------------------------------------------------------------
+
+\ifx\vc@english\@undefined\else
+  \renewcommand{\figurename}{Figure\ }
+  \renewcommand{\tablename}{Table\ }
+  \renewcommand{\refname}{References}
+\fi
 
 % ------------------------------------------------------------------------------
 % 参考文献のスタイル設定
@@ -126,7 +143,11 @@
 \renewcommand{\maketitle}{%
   \twocolumn[\vc@maketitle]
   \ifx\@abstract@defined\@undefined\else
-    \section*{概要}
+    \ifx\vc@english\@undefined
+      \section*{概要}
+    \else
+      \section*{Abstract}
+    \fi
     \@abstract
   \fi
 }
