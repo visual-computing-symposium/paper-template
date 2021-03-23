@@ -33,6 +33,9 @@
 % For the \titlespacing command
 \RequirePackage{titlesec}
 
+% For enforce first paragraphs to be indented (to follow Japanese tradition)
+\RequirePackage{indentfirst}
+
 % ------------------------------------------------------------------------------
 % ページ全体の定義
 % ------------------------------------------------------------------------------
@@ -48,8 +51,8 @@
 \renewcommand{\baselinestretch}{0.9}
 
 \titlespacing*{\section}{0pt}{12.0pt}{6.0pt}
-\titlespacing*{\subsection}{0pt}{6.0pt}{3.0pt}
-\titlespacing*{\subsubsection}{0pt}{3.0pt}{1.5pt}
+\titlespacing*{\subsection}{0pt}{8.0pt}{4.0pt}
+\titlespacing*{\subsubsection}{0pt}{4.0pt}{2.0pt}
 
 % ------------------------------------------------------------------------------
 % 色の定義
