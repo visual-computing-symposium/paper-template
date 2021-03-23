@@ -63,7 +63,7 @@ WordからPDFを作成した場合, 文書のプロパティに著者を特定�
 \label{sec:template}
 
 本テンプレートを用いて原稿の本文を記述する際の例を下記に示す.
-なお表の詳細なフォーマットや参照に用いるコマンド\footnote{ここでは\textsf{hyperref}パッケージが提供する\textsf{autoref}コマンド\cite{Wikibooks:LaTeX:Ref}を利用している.}などは厳密に従う必要はない.
+なお表の詳細なフォーマットや参照に用いるコマンド\footnote{ここでは\textsf{cleveref}パッケージが提供する\textsf{cref}コマンド\cite{Wikibooks:LaTeX:Ref}を利用している.}などは厳密に従う必要はない.
 
 インライン数式は$\mathbf{x} \in \mathbb{R}^{n}$のように記述する.
 ディスプレイ数式は
@@ -72,10 +72,10 @@ WordからPDFを作成した場合, 文書のプロパティに著者を特定�
   \label{eq:optimization}
 \end{align}
 などのように記述する.
-数式は\autoref{eq:optimization}などのように参照する.
-図は\autoref{fig:teaser}や\autoref{fig:leica}などのように参照する.
-表は\autoref{tab:accuracy}などのように参照する.
-セクションは\autoref{sec:template}などのように参照する.
+数式は\cref{eq:optimization}などのように参照する.
+図は\cref{fig:teaser}や\cref{fig:leica}などのように参照する.
+表は\cref{tab:accuracy}などのように参照する.
+セクションは\cref{sec:template}などのように参照する.
 参考文献は\cite{GSC12,WL00}などのように参照する.
 URLは\url{https://www.siggraph.org/}のように記載する.
 
@@ -125,7 +125,7 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 \subsection{Overleaf環境での使用}
 
 本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.
-Overleafで使用する場合, \autoref{fig:overleaf}のように``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している.}し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする.
+Overleafで使用する場合, \cref{fig:overleaf}のように``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している.}し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする.
 
 \begin{figure}
   \centering

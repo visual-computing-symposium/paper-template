@@ -19,6 +19,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{array}
 \RequirePackage[square,sort,comma,numbers]{natbib}
+\RequirePackage[noabbrev,nameinlink]{cleveref}
 
 % Reference: https://qiita.com/zr_tex8r/items/297154ca924749e62471
 \RequirePackage{bxpapersize}
@@ -56,6 +57,23 @@
 \renewcommand{\sectionautorefname}{\S}
 \renewcommand{\subsectionautorefname}{\S}
 \renewcommand{\subsubsectionautorefname}{\S}
+
+% ------------------------------------------------------------------------------
+% \crefの表記の設定
+% ------------------------------------------------------------------------------
+
+\crefname{section}{}{}
+\crefname{subsection}{}{}
+\crefname{subsubsection}{}{}
+\crefname{figure}{}{}
+\crefname{table}{}{}
+\crefname{equation}{}{}
+\creflabelformat{section}{#2第#1節#3}
+\creflabelformat{subsection}{#2第#1小節#3}
+\creflabelformat{subsubsection}{#2第#1項#3}
+\creflabelformat{figure}{#2図#1#3}
+\creflabelformat{table}{#2表#1#3}
+\creflabelformat{equation}{#2式(#1)#3}
 
 % ------------------------------------------------------------------------------
 % 参考文献のスタイル設定
