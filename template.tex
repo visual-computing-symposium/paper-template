@@ -34,7 +34,7 @@
 
 % 概要の定義（最初のページのタイトルの直後に出力される）
 \begin{abstract}
-  これはコンピュータグラフィクス及びその周辺分野における技術に関する学術シンポジウムVisual Computingへの投稿原稿を執筆するためのテンプレートファイルである.
+  本テンプレートは, コンピュータグラフィクス及びその周辺分野における技術に関する学術シンポジウムVisual Computingへの投稿原稿を執筆するために作成されたものである.
 \end{abstract}
 
 % ティザー画像の定義（最初のページの上部に出力される）
@@ -54,29 +54,10 @@
 % 以下に論文本文を記述する
 % ------------------------------------------------------------------------------
 
-\section{VC 2020論文募集}
+\section{原稿作成における注意事項}
 
-\subsection{はじめに}
-
-コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
-創造的，独創的な学術的成果をはじめ，CG技術の新しい使い方や実用例などの応用的成果まで，未来のCG業界を刺激する幅広い投稿をお待ちしております．
-
-募集するカテゴリは，論文（査読有り，口頭発表）とポスター（査読無し）の2つです．
-
-論文に著者名，所属，謝辞などは書かないでください．WordからPDFを作成した場合，文書のプロパティに著者を特定できる情報が入ることがありますが，そのような情報は削除してください．
-
-論文は締切前であれば何度でもアップロードできます．締切を過ぎた投稿は受け付けませんので，時間に余裕を持って投稿してください．
-
-\subsection{論文（査読有り，口頭発表）}
-
-学術的な研究成果について，研究の背景，理論，アルゴリズム，結果などを紹介する論文を募集します． また，CG技術の新しい使い方や，CG技術の産業応用に関する論文の投稿も歓迎します．投稿論文はプログラム委員会での議論を通じて，ロング発表，ショート発表，不採択のいずれかに判定されます．
-また，ロング・ショートを問わず，採択論文は査読付きシンポジウム論文（フルペーパー）として扱います．
-
-優秀なロング発表論文にはVC論文賞を，優秀なショート発表にはVCショート発表賞をそれぞれ授与します． 受賞論文にはそれぞれ賞状と副賞を贈呈するとともに，2020年夏頃に発行されるCGWORLD.jpに掲載予定の「Visual Computing 2020開催レポート」(仮題)の中で論文紹介されます．
-
-\subsection{ポスター（査読無し）}
-
-完成された研究のみならず，新しいアイデア，進行中の研究紹介など，さまざまな性格の発表を募集します．VCのポスターでは，「既存技術について，自分の頭で考え直したこと」もオリジナリティであるとして発表を歓迎します．優秀なポスターについてはVCポスター賞を授与します．
+投稿時の原稿には著者名, 所属, 謝辞などは一切記入しないでください.
+WordからPDFを作成した場合, 文書のプロパティに著者を特定できる情報が入ることがありますが, そのような情報は削除してください.
 
 \section{テンプレートの使用例}
 \label{sec:template}
@@ -87,15 +68,11 @@
 インライン数式は$\mathbf{x} \in \mathbb{R}^{n}$のように記述する.
 ディスプレイ数式は
 \begin{align}
-  \mathbf{A} \mathbf{x} = \mathbf{b}
-  \label{eq:linear_system}
-\end{align}
-や, あるいは
-\begin{align}
   \mathbf{x}^{*} = \mathop{\text{arg max}}_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})
+  \label{eq:optimization}
 \end{align}
 などのように記述する.
-数式は\autoref{eq:linear_system}などのように参照する.
+数式は\autoref{eq:optimization}などのように参照する.
 図は\autoref{fig:teaser}や\autoref{fig:leica}などのように参照する.
 表は\autoref{tab:accuracy}などのように参照する.
 セクションは\autoref{sec:template}などのように参照する.
@@ -126,9 +103,10 @@ URLは\url{https://www.siggraph.org/}のように記載する.
   \end{tabular}
 \end{table}
 
-\section{テンプレートについて}
+\section{テンプレートの詳細}
 
-本テンプレートの実装の詳細について記す.
+\subsection{テンプレートの実装}
+
 \textsf{vc}クラスファイルは\textsf{bxjsarticle}クラスファイルを基礎としており, pLaTeX, upLaTeX, LuaLaTeXでの利用をサポートしている.
 このクラスファイルでは次のパッケージをロードしている:
 \textsf{url},
@@ -144,6 +122,8 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 \textsf{bxpapersize},
 \textsf{environ}.
 
+\subsection{Overleaf環境での使用}
+
 本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.
 Overleafで使用する場合, \autoref{fig:overleaf}のように``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している.}し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする.
 
@@ -153,6 +133,8 @@ Overleafで使用する場合, \autoref{fig:overleaf}のように``New Project''
   \caption{Overleafで本テンプレートを使用する際の手続き.}
   \label{fig:overleaf}
 \end{figure}
+
+\subsection{バグ報告・改善提案}
 
 本テンプレートはGitHub\footnote{\url{https://github.com/visual-computing-symposium/paper-template}}上で管理されている.
 バグ報告や改善提案などはGitHubを通して誰でも行うことができる.
