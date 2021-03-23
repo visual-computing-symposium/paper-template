@@ -42,6 +42,7 @@
 \setlength{\oddsidemargin}{-10mm}
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
+\renewcommand{\baselinestretch}{0.9}
 
 % ------------------------------------------------------------------------------
 % 色の定義
