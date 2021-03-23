@@ -30,6 +30,9 @@
 % For the \Collect@Body command
 \RequirePackage{environ}
 
+% For the \titlespacing command
+\RequirePackage{titlesec}
+
 % ------------------------------------------------------------------------------
 % ページ全体の定義
 % ------------------------------------------------------------------------------
@@ -43,6 +46,10 @@
 \setlength{\evensidemargin}{-10mm}
 \setlength{\columnsep}{6mm}
 \renewcommand{\baselinestretch}{0.9}
+
+\titlespacing*{\section}{0pt}{12.0pt}{6.0pt}
+\titlespacing*{\subsection}{0pt}{6.0pt}{3.0pt}
+\titlespacing*{\subsubsection}{0pt}{3.0pt}{1.5pt}
 
 % ------------------------------------------------------------------------------
 % 色の定義
