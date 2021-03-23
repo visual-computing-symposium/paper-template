@@ -7,7 +7,7 @@
 %%
 \ProvidesClass{vc}[2021/02/24]
 
-\LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard]{bxjsarticle}
+\LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard,base=10pt]{bxjsarticle}
 
 \RequirePackage[hyphens]{url}
 \RequirePackage[colorlinks]{hyperref}
