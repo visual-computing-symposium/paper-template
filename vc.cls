@@ -124,13 +124,13 @@
   \twocolumn[\vc@maketitle]
   \ifx\@abstract@defined\@undefined\else
     \section*{概要}
-    \noindent\@abstract
+    \@abstract
   \fi
 }
 \newcommand{\vc@maketitle}{%
   \begin{center}
     \ifx\@title\@undefined\else
-      {\LARGE\@title\par}
+      {\LARGE\textbf{\@title}\par}
     \fi
     \vskip 3mm
     \ifx\@authors\@undefined\else
