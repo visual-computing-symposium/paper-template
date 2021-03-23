@@ -7,6 +7,9 @@
 %%
 \ProvidesClass{vc}[2021/02/24]
 
+\DeclareOption{anonymous}{\def\vc@anonymous{}}
+\ProcessOptions\relax
+
 \LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard,base=10pt]{bxjsarticle}
 
 \RequirePackage[hyphens]{url}
@@ -126,16 +129,24 @@
       \begingroup
         \large
         \centering
-        \@authors
+        \ifx\vc@anonymous\@undefined
+          \@authors
+        \else
+          Anonymous Authors
+        \fi
       \endgroup
       \vskip 1mm
     \fi
     \ifx\@affiliations\@undefined\else
-      \@affiliations
+      \ifx\vc@anonymous\@undefined
+        \@affiliations
+      \fi
     \fi
     \ifx\@emails\@undefined\else
-      \vskip 0mm
-      \@emails
+      \ifx\vc@anonymous\@undefined
+        \vskip 0mm
+        \@emails
+      \fi
     \fi
     \ifx\@teaser\@undefined\else
       \vskip 2mm
@@ -152,7 +163,13 @@
 % PDFメタデータの設定
 % ------------------------------------------------------------------------------
 
-\newcommand{\plainauthors}[1]{\gdef\@plainauthors{#1}}
+\newcommand{\plainauthors}[1]{
+  \ifx\vc@anonymous\@undefined
+    \gdef\@plainauthors{#1}
+  \else
+    \gdef\@plainauthors{Anonymous Authors}
+  \fi
+}
 
 \let\oldmaketitle\maketitle
 \renewcommand{\maketitle}{

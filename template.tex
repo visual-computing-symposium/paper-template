@@ -1,3 +1,6 @@
+% クラスファイルの読み込み
+% Note: 投稿時には著者情報を削除するためにanonymousオプションを使用することもできる
+% \documentclass[anonymous]{vc}
 \documentclass{vc}
 
 % タイトルの定義（最初のページの上部に出力されるほか、PDFのメタデータとしても利用される）
@@ -122,6 +125,20 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 \textsf{bxpapersize},
 \textsf{environ}.
 
+\subsection{投稿時の著者情報の削除}
+
+\textsf{vc}クラスファイルでは, 投稿時に著者情報を一時的に削除するためのオプション\textsf{anonymous}が用意されている.
+このオプションを使用するには, テンプレートファイルの冒頭の
+\begin{verbatim}
+\documentclass{vc}
+\end{verbatim}
+となっている部分を
+\begin{verbatim}
+\documentclass[anonymous]{vc}
+\end{verbatim}
+のように変更すれば良い.
+このオプションを使用することで, 著者名(\textsf{authors}環境および\textsf{plainauthors}環境で記入した内容)が自動的に``Anonymous Authors''に差し変わり, また著者所属およびメールアドレスが非表示になる.
+
 \subsection{Overleaf環境での使用}
 
 本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.
@@ -134,7 +151,7 @@ Overleafで使用する場合, \cref{fig:overleaf}のように``New Project''メ
   \label{fig:overleaf}
 \end{figure}
 
-\subsection{バグ報告・改善提案}
+\subsection{バグ報告・改善提案など}
 
 本テンプレートはGitHub\footnote{\url{https://github.com/visual-computing-symposium/paper-template}}上で管理されている.
 バグ報告や改善提案などはGitHubを通して誰でも行うことができる.
