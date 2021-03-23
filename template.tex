@@ -34,8 +34,7 @@
 
 % 概要の定義（最初のページの上部に出力される）
 \begin{abstract}
-  コンピュータ・グラフィックス(CG)，及び，CGの周辺分野における革新的な技術の発表を募集します．
-  創造的，独創的な学術的成果をはじめ，CG技術の新しい使い方や実用例などの応用的成果まで，未来のCG業界を刺激する幅広い投稿をお待ちしております．
+  これはコンピュータグラフィクス及びその周辺分野における技術に関する学術シンポジウムVisual Computingへの投稿原稿を執筆するためのテンプレートファイルである.
 \end{abstract}
 
 % ティザー画像の定義（最初のページの上部に出力される）
@@ -130,23 +129,20 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 \section{テンプレートについて}
 
 本テンプレートの実装の詳細について記す.
-本テンプレートは\textsf{bxjsarticle}クラスファイルを基礎としており, pLaTeX, upLaTeX, LuaLaTeXでの利用をサポートしている.
-クラスファイルでは以下のパッケージをロードしている.
-\begin{itemize}
-  \item \textsf{url}
-  \item \textsf{hyperref}
-  \item \textsf{hypcap}
-  \item \textsf{booktabs}
-  \item \textsf{graphicx}
-  \item \textsf{xcolor}
-  \item \textsf{amsmath}
-  \item \textsf{amssymb}
-  \item \textsf{array}
-  \item \textsf{natbib}
-  \item \textsf{bxpapersize}
-  \item \textsf{environ}
-  \item \textsf{xstring}
-\end{itemize}
+\textsf{vc}クラスファイルは\textsf{bxjsarticle}クラスファイルを基礎としており, pLaTeX, upLaTeX, LuaLaTeXでの利用をサポートしている.
+このクラスファイルでは次のパッケージをロードしている:
+\textsf{url},
+\textsf{hyperref},
+\textsf{hypcap},
+\textsf{booktabs},
+\textsf{graphicx},
+\textsf{xcolor},
+\textsf{amsmath},
+\textsf{amssymb},
+\textsf{array},
+\textsf{natbib},
+\textsf{bxpapersize},
+\textsf{environ}.
 
 本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.
 Overleafで使用する場合, \autoref{fig:overleaf}のように``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している.}し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする.
