@@ -67,23 +67,23 @@
 % 環境の定義
 % ------------------------------------------------------------------------------
 
-\newenvironment{authors}{\Collect@Body\@saveauthors}{}
+\newenvironment{authors}{\Collect@Body\@saveauthors\ignorespaces}{\ignorespacesafterend}
 \long\def\@saveauthors#1{\long\gdef\@authors{#1}}
 \@saveauthors{}
 
-\newenvironment{affiliations}{\Collect@Body\@saveaffiliations}{}
+\newenvironment{affiliations}{\Collect@Body\@saveaffiliations\ignorespaces}{\ignorespacesafterend}
 \long\def\@saveaffiliations#1{\long\gdef\@affiliations{#1}}
 \@saveaffiliations{}
 
-\newenvironment{emails}{\Collect@Body\@saveemails}{}
+\newenvironment{emails}{\Collect@Body\@saveemails\ignorespaces}{\ignorespacesafterend}
 \long\def\@saveemails#1{\long\gdef\@emails{#1}}
 \@saveemails{}
 
-\renewenvironment{abstract}{\Collect@Body\@saveabstract}{\gdef\@abstract@defined{}}
+\renewenvironment{abstract}{\Collect@Body\@saveabstract\ignorespaces}{\gdef\@abstract@defined{}\ignorespacesafterend}
 \long\def\@saveabstract#1{\long\gdef\@abstract{#1}}
 \@saveabstract{}
 
-\newenvironment{teaserfigure}{\Collect@Body\@saveteaser}{}
+\newenvironment{teaserfigure}{\Collect@Body\@saveteaser\ignorespaces}{\ignorespacesafterend}
 \long\def\@saveteaser#1{\long\gdef\@teaser{#1}}
 \@saveteaser{}
 
