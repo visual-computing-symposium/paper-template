@@ -1,5 +1,6 @@
 ## Output files:
-template.pdf
+vc-template.pdf
+vc-template.zip
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
