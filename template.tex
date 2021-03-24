@@ -4,7 +4,7 @@
 % Note: カメラレディ提出時には著者情報を表示するため，次のようにanonymousオプションを使用しないようにする
 % \documentclass{vc}
 
-% タイトルの定義（最初のページの上部に出力されるほか、PDFのメタデータとしても利用される）
+% タイトルの定義（最初のページの上部に出力されるほか，PDFのメタデータとしても利用される）
 \title{Visual Computing論文テンプレート}
 
 % 著者の定義（PDFのメタデータとして利用される）
@@ -38,7 +38,8 @@
 
 % 概要の定義（最初のページのタイトルの直後に出力される）
 \begin{abstract}
-  本テンプレートは, コンピュータグラフィクス及びその周辺分野における技術に関する学術シンポジウムVisual Computingへの投稿原稿を執筆するために作成されたものである.
+  本テンプレートは，コンピュータグラフィクス及びその周辺技術に関する学術シンポジウムVisual Computingへの投稿原稿の執筆のために作成されたものである．
+  LaTeX版とWord版が用意されており，どちらを使用しても良い．
 \end{abstract}
 
 % ティザー画像の定義（最初のページの上部に出力される）
@@ -46,7 +47,7 @@
 \begin{teaserfigure}
   \centering
   \includegraphics[width=\textwidth]{./figures/leica.pdf}
-  \caption{ティザー画像のキャプションをここに記述する.}
+  \caption{ティザー画像のキャプションをここに記述する．}
   \label{fig:teaser}
 \end{teaserfigure}
 
@@ -60,39 +61,39 @@
 
 \section{原稿作成における注意事項}
 
-投稿時の原稿には著者名, 所属, 謝辞などは一切記入しないでください.
-WordからPDFを作成した場合, 文書のプロパティに著者を特定できる情報が入ることがありますが, そのような情報は削除してください.
+投稿時の原稿には著者名，所属，謝辞などは一切記入しないこと．
+WordからPDFを作成した場合，文書のプロパティに著者を特定できる情報が入ることがあるが，そのような情報は削除すること．
 
 \section{テンプレートの使用例}
 \label{sec:template}
 
-本テンプレートを用いて原稿の本文を記述する際の例を下記に示す.
-なお表の詳細なフォーマットや参照に用いるコマンド\footnote{ここでは\textsf{cleveref}パッケージが提供する\textsf{cref}コマンド\cite{Wikibooks:LaTeX:Ref}を利用している.}などは厳密に従う必要はない.
+本テンプレートを用いて原稿の本文を記述する際の例を下記に示す．
+なお表の詳細なフォーマットや参照に用いるコマンド\footnote{ここでは\textsf{cleveref}パッケージが提供する\textsf{cref}コマンド\cite{Wikibooks:LaTeX:Ref}を利用している．}などは厳密に従う必要はない．
 
-インライン数式は$\mathbf{x} \in \mathbb{R}^{n}$のように記述する.
+インライン数式は$\mathbf{x} \in \mathbb{R}^{n}$のように記述する．
 ディスプレイ数式は
 \begin{align}
   \mathbf{x}^{*} = \mathop{\text{arg max}}_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})
   \label{eq:optimization}
 \end{align}
-などのように記述する.
-数式は\cref{eq:optimization}などのように参照する.
-図は\cref{fig:teaser}や\cref{fig:leica}などのように参照する.
-表は\cref{tab:accuracy}などのように参照する.
-セクションは\cref{sec:template}などのように参照する.
-参考文献は\cite{GSC12,WL00}などのように参照する.
-URLは\url{https://www.siggraph.org/}のように記載する.
+などのように記述する．
+数式は\cref{eq:optimization}などのように参照する．
+図は\cref{fig:teaser}や\cref{fig:leica}などのように参照する．
+表は\cref{tab:accuracy}などのように参照する．
+セクションは\cref{sec:template}などのように参照する．
+参考文献は\cite{GSC12,WL00}などのように参照する．
+URLは\url{https://www.siggraph.org/}のように記載する．
 
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/leica.pdf}
-  \caption{図のキャプションをここに記述する.}
+  \caption{図のキャプションをここに記述する．}
   \label{fig:leica}
 \end{figure}
 
 \begin{table}
   \centering
-  \caption{表のキャプションをここに記述する.}
+  \caption{表のキャプションをここに記述する．}
   \label{tab:accuracy}
   \begin{tabular}{@{}rrrr@{}}
     \toprule
@@ -111,7 +112,7 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 
 \subsection{テンプレートの実装}
 
-\textsf{vc}クラスファイルは\textsf{bxjsarticle}クラスファイルを基礎としており, pLaTeX, upLaTeX, LuaLaTeXでの利用をサポートしている.
+\textsf{vc}クラスファイルは\textsf{bxjsarticle}クラスファイルを基礎としており，pLaTeX，upLaTeX，LuaLaTeXでの利用をサポートしている．
 このクラスファイルでは次のパッケージをロードしている:
 \textsf{url},
 \textsf{hyperref},
@@ -129,8 +130,8 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 
 \subsection{投稿時の著者情報の削除}
 
-\textsf{vc}クラスファイルでは, 投稿時に著者情報を一時的に削除するためのオプション\textsf{anonymous}が用意されている.
-このオプションを使用するには, テンプレートファイルの冒頭の
+\textsf{vc}クラスファイルでは，投稿時に著者情報を一時的に削除するためのオプション\textsf{anonymous}が用意されている．
+このオプションを使用するには，テンプレートファイルの冒頭の
 \begin{verbatim}
 \documentclass{vc}
 \end{verbatim}
@@ -138,8 +139,8 @@ URLは\url{https://www.siggraph.org/}のように記載する.
 \begin{verbatim}
 \documentclass[anonymous]{vc}
 \end{verbatim}
-のように変更すれば良い.
-このオプションを使用することで, 著者名(\textsf{authors}環境および\textsf{plainauthors}環境で記入した内容)が自動的に``Anonymous Authors''に差し変わり, また著者所属およびメールアドレスが非表示になる.
+のように変更すれば良い．
+このオプションを使用することで，著者名（\textsf{authors}環境および\textsf{plainauthors}環境で記入した内容）が自動的に``Anonymous Authors''に差し変わり，また著者所属およびメールアドレスが非表示になる．
 
 \subsection{English Support}
 
@@ -153,21 +154,21 @@ at the beginning of the source code.
 
 \subsection{Overleaf環境での使用}
 
-本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている.
-Overleafで使用する場合, まず``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している.}し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする(\cref{fig:overleaf}, 左).
-続いて, ``Menu''の``Settings''欄の``Compiler''の値について, デフォルトでは{pdfLaTeX}となっているところを, LaTeXあるいはLuaLaTeXへと変更する(\cref{fig:overleaf}, 右).
+本テンプレートはローカル環境での使用に加えてオンライン環境の一つであるOverleaf\footnote{\url{https://www.overleaf.com/}}での使用もサポートしている．
+Overleafで使用する場合，まず``New Project''メニュー下にある``Upload Project''項目を選択\footnote{ここでは2021年3月時点でのユーザインタフェースに基づき説明している．}し，予めダウンロードしておいた本テンプレートのZIPファイルをアップロードする（\cref{fig:overleaf}，左）．
+続いて，``Menu''をクリックした際に現れるウィジェットの``Settings''欄の``Compiler''項目の値について，デフォルトでは{pdfLaTeX}となっているところを，LaTeXあるいはLuaLaTeXへと変更する（\cref{fig:overleaf}，右）．
 
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/overleaf.pdf}
-  \caption{Overleafで本テンプレートを使用する際の手続き.}
+  \caption{Overleafで本テンプレートを使用する際の手順．}
   \label{fig:overleaf}
 \end{figure}
 
 \subsection{バグ報告・改善提案など}
 
-本テンプレートはGitHub\footnote{\url{https://github.com/visual-computing-symposium/paper-template}}上で管理されている.
-バグ報告や改善提案などはGitHubを通して誰でも行うことができる.
+本テンプレートはGitHub\footnote{\url{https://github.com/visual-computing-symposium/paper-template}}上で管理されている．
+バグ報告や改善提案などはGitHubを通して誰でも行うことができる．
 
 \bibliographystyle{IEEEtran}
 \bibliography{template.bib}
