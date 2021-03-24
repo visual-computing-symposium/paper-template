@@ -18,8 +18,8 @@ jobs:
         sudo apt-get install -y --no-install-recommends latexmk
     - name: compile
       run: |
-        latexmk template.tex
+        latexmk vc-template.tex
     - uses: actions/upload-artifact@v1
       with:
-        name: template.pdf
-        path: template.pdf
+        name: vc-template.pdf
+        path: vc-template.pdf
