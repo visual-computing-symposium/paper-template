@@ -5,7 +5,7 @@
 %%
 %% This class file is distributed under the MIT License.
 %%
-\ProvidesClass{vc}[2021/03/24 v1.1]
+\ProvidesClass{vc}[2021/03/24 v1.2]
 
 \DeclareOption{anonymous}{\def\vc@anonymous{}}
 \DeclareOption{english}{\def\vc@english{}}
