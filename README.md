@@ -14,7 +14,7 @@ Visual Computingシンポジウム向けの論文テンプレートです。
 
 Overleafで使用する場合、 `New Project` メニュー下にある `Upload Project` 項目を選択し, 予めダウンロードしておいた本テンプレートのZIPファイルをアップロードしてください。
 
-## コンパイル方法
+## 文書PDFへのコンパイル方法
 
 ### Latexmkを用いたコンパイル（推奨）
 
@@ -26,3 +26,9 @@ latexmk vc-template.tex
 ### その他の方法によるコンパイル
 
 pLaTeX, pBibTeX, dvipdfmxなどを直接コマンドラインから呼び出すことでPDFファイルの生成をすることができます。
+
+## 著者への配布用テンプレートZIPの作成方法
+
+```bash
+sh dist.sh
+```
