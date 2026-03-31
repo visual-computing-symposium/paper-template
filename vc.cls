@@ -9,12 +9,14 @@
 
 \DeclareOption{anonymous}{\def\vc@anonymous{}}
 \DeclareOption{english}{\def\vc@english{}}
+\DeclareOption*{\edef\vc@papertype{\CurrentOption}}
 \ProcessOptions\relax
 
 \LoadClass[autodetect-engine,dvi=dvipdfmx,a4paper,twocolumn,ja=standard,base=10pt]{bxjsarticle}
 
 \RequirePackage[hyphens]{url}
 \RequirePackage[colorlinks]{hyperref}
+\urlstyle{same}
 \RequirePackage[all]{hypcap}
 \RequirePackage{booktabs}
 \RequirePackage{graphicx}
@@ -153,6 +155,10 @@
 }
 \newcommand{\vc@maketitle}{%
   \begin{center}
+    \ifx\vc@papertype\@undefined\else
+      {\large\textbf{\vc@papertype}\par}
+      \vskip 2mm
+    \fi
     \ifx\@title\@undefined\else
       {\LARGE\textbf{\@title}\par}
     \fi
@@ -184,6 +190,7 @@
       \vskip 2mm
       \begingroup
         \def\@captype{figure}
+        \capstart
         \@teaser
       \endgroup
       \vskip 5mm
